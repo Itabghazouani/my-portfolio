@@ -1,0 +1,16 @@
+.section {
+  padding: var(--gutter-huge) 0;
+  border-bottom: var(--border-light);
+}
+
+.projectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+
+@media (max-width: 500px) {
+  .projectsGrid {
+    gap: 10rem;
+  }
+}
