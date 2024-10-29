@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
     technologies: ['HTML', 'CSS', 'Javascript', 'Firebase'],
     siteUrl: 'https://at-least-i-have-my-list.netlify.app/',
     githubUrl: 'https://github.com/Itabghazouani/Shopping-List-App',
-    imageUrl: '/assets/cart-shopping.png',
+    imageUrl: '/assets/shoppinglist.jpeg',
     imageAlt: 'At Least I have My List',
   },
   {
