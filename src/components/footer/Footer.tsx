@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { SOCIAL_LINKS } from '@/lib/constants';
-import styles from './Footer.module.css';
+import styles from './footer.module.css';
 
 const Footer = () => {
   return (

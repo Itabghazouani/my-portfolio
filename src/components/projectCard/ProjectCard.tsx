@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Project } from '@/types';
 import GithubLogo from '../../../public/assets/icons/github.svg';
-import styles from './ProjectCard.module.css';
+import styles from './projectCard.module.css';
 
 interface IProjectCardProps {
   project: Project;

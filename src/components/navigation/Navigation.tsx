@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import styles from './Navigation.module.css';
+import styles from './navigation.module.css';
 
 const Navigation = () => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {

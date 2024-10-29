@@ -1,5 +1,5 @@
 import ProjectCard from '../projectCard/ProjectCard';
-import styles from './Work.module.css';
+import styles from './work.module.css';
 import { PROJECTS } from '@/lib/constants';
 
 const Work = () => {
