@@ -6,16 +6,16 @@ import LinkedinIcon from '../../public/assets/icons/linkedin.svg';
 import GithubIcon from '../../public/assets/icons/github.svg';
 
 export const PROJECTS: Project[] = [
-  {
-    title: 'Snap And Eat',
-    description:
-      'A mobile app allowing users to search for restaurants based on dishes they crave, view a list of options, and book a table directly.',
-    technologies: ['HTML', 'SCSS', 'Ruby on Rails', 'Javascript'],
-    siteUrl: '****',
-    githubUrl: 'https://github.com/Itabghazouani/snap_and_eat',
-    imageUrl: '/assets/restaurant_41.jpg',
-    imageAlt: 'Snap And Eat',
-  },
+  // {
+  //   title: 'Snap And Eat',
+  //   description:
+  //     'A mobile app allowing users to search for restaurants based on dishes they crave, view a list of options, and book a table directly.',
+  //   technologies: ['HTML', 'SCSS', 'Ruby on Rails', 'Javascript'],
+  //   siteUrl: '****',
+  //   githubUrl: 'https://github.com/Itabghazouani/snap_and_eat',
+  //   imageUrl: '/assets/restaurant_41.jpg',
+  //   imageAlt: 'Snap And Eat',
+  // },
   {
     title: 'My Coding Journey',
     description:
