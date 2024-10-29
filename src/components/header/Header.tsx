@@ -13,14 +13,14 @@ const Header = () => {
       <div className="row">
         <div className={styles.text}>
           <h1 className={styles.title}>
-            <span>Jane Smith</span>
+            <span>Itab Ghazouani</span>
           </h1>
           <p className={styles.description}>
-            A Front-End Developer based in London, UK
+            A Front-End Developer based in Barcelona, Spain
           </p>
           <Link
             href="#contact"
-            className="btn btn--pink"
+            className="btn btn--orange"
             onClick={(e) => {
               e.preventDefault();
               document

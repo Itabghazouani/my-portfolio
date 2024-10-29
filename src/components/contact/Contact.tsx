@@ -8,16 +8,24 @@ const Contact = () => {
         <h2>Get in Touch</h2>
         <div className={styles.container}>
           <p className={styles.text}>
-            Are you looking for a fast-performing and user-friendly website to
-            represent your product or business? or looking for any kind of
-            consultation? or want to ask questions? or have some advice for me
-            or just want to say &quot;Hi 👋&quot; in any case feel free to Let
-            me know. I will do my best to respond back. 😊 The quickest way to
-            reach out to me is via an email.
+            Are you looking for a committed front-end developer ready to bring
+            fresh ideas to your team? 🚀 If you need a fast learner who’s eager
+            to dive into new projects and deliver high-quality results, I’d love
+            to connect. I’m available to start right away and ready to make an
+            impact from day one! 🌟 Reach out by email or phone, and I’ll
+            respond as soon as possible—I look forward to working together! 📞💼
           </p>
-          <Link href="mailto:you@example.com" className={`btn ${styles.email}`}>
-            you@example.com
-          </Link>
+          <div className={styles.contactContainer}>
+            <Link
+              href="mailto:you@example.com"
+              className={`btn ${styles.email}`}
+            >
+              itab.ghazouani@gmail.com
+            </Link>
+            <Link href="#contact" className={`btn ${styles.email}`}>
+              +34 722 308 413
+            </Link>
+          </div>
         </div>
       </div>
     </section>

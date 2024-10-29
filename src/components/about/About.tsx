@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import JaneImage from '../../../public/assets/jane.jpg';
+import ItabPhoto from '../../../public/assets/itab-photo.jpg';
 import styles from './about.module.css';
 
 const About = () => {
@@ -13,16 +13,28 @@ const About = () => {
         <div className={styles.content}>
           <div className={styles.text}>
             <p>
-              I&apos;m a web developer and designer based out of London, UK...
+              With a foundation from Le Wagon’s intensive bootcamp, I began my
+              journey into web development, mastering Ruby on Rails and gaining
+              a solid understanding of front-end fundamentals. Driven by a
+              passion for building interactive applications, I delved into
+              JavaScript and React through an online class with Scrimba. I
+              continued to advance my skills by learning Next.js independently,
+              creating various projects that allowed me to apply and strengthen
+              my knowledge.
             </p>
-            <p>My background is in teaching and marketing...</p>
+            <p>
+              After a year of hands-on practice, including an internship,
+              I&apos;m eager to take on new challenges as a front-end developer,
+              ready to contribute to innovative projects with my growing
+              expertise.
+            </p>
             <Link href="/resume.pdf" className="btn">
               My Resume
             </Link>
           </div>
           <div className={styles.photoContainer}>
             <Image
-              src={JaneImage}
+              src={ItabPhoto}
               alt="Jane Smith"
               width={400}
               height={400}

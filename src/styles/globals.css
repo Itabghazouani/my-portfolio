@@ -41,7 +41,7 @@ h2::after {
   display: block;
   height: 2px;
   width: 10rem;
-  background: var(--pink);
+  background: var(--orange);
   margin: var(--gutter-small) 0;
 }
 
@@ -82,7 +82,7 @@ p {
   padding: 0.6rem;
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--pink);
+  border-bottom: 1px solid var(--orange);
 }
 
 .link__text::after {
@@ -105,7 +105,7 @@ p {
 .link__text:hover::after,
 .link__text:focus:after {
   right: 0;
-  background: var(--pink);
+  background: var(--orange);
 }
 
 .link__text span {
@@ -120,20 +120,20 @@ p {
   padding: 1rem 4.2rem;
   text-decoration: none;
   color: inherit;
-  border: 1px solid var(--pink);
+  border: 1px solid var(--orange);
   font-weight: 400;
 }
 
-.btn--pink {
-  background: var(--pink);
+.btn--orange {
+  background: var(--orange);
   transition: all 0.2s;
 }
 
-.btn--pink::after {
+.btn--orange::after {
   display: none;
 }
 
-.btn--pink:hover,
-.btn--pink:focus {
+.btn--orange:hover,
+.btn--orange:focus {
   background: transparent;
 }

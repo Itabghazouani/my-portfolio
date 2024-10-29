@@ -35,13 +35,13 @@
 }
 
 .link:hover {
-  color: var(--pink);
+  color: var(--orange);
 }
 
 .link:hover::after {
   right: 0;
   height: 2px;
-  background: var(--pink);
+  background: var(--orange);
 }
 
 @media (max-width: 500px) {
