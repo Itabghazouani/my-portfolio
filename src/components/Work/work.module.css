@@ -3,14 +3,14 @@
   border-bottom: var(--border-light);
 }
 
-.projectsGrid {
+.container {
   display: flex;
   flex-direction: column;
   gap: 15rem;
 }
 
 @media (max-width: 500px) {
-  .projectsGrid {
+  .container {
     gap: 10rem;
   }
 }

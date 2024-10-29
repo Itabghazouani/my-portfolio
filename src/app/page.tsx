@@ -1,3 +1,5 @@
+'use client';
+
 import {
   About,
   Contact,
@@ -6,8 +8,19 @@ import {
   ScrollToTop,
   Work,
 } from '@/components';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <>
       <Header />

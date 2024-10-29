@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { SOCIAL_LINKS } from '@/lib/constants';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <div className="row">
-        <ul className="footer__social-links">
+        <ul className={styles.socialList}>
           {SOCIAL_LINKS.map((link) => (
-            <li key={link.platform} className="footer__social-link-item">
+            <li key={link.platform} className={styles.socialItem}>
               <Link
                 href={link.url}
                 target="_blank"
@@ -20,7 +21,7 @@ const Footer = () => {
                   width={40}
                   height={40}
                   alt={link.platform}
-                  className="footer__social-image"
+                  className={styles.socialIcon}
                 />
               </Link>
             </li>

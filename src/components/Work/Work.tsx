@@ -29,7 +29,7 @@ const Work = () => {
     <section className={styles.section} id="work">
       <div className="row">
         <h2>My Work</h2>
-        <div className={styles.projectsGrid}>
+        <div className={styles.container}>
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

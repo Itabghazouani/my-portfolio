@@ -1,9 +1,9 @@
-.box {
+.container {
   display: flex;
   align-items: center;
 }
 
-.text {
+.content {
   flex: 0 0 30%;
 }
 
@@ -17,35 +17,36 @@
   align-items: center;
 }
 
-.code {
+.githubIcon {
   display: block;
   height: 3rem;
   margin-left: var(--gutter-normal);
   transition: all 0.3s;
 }
 
-.code:hover {
+.githubIcon:hover {
   transform: scale(1.2);
 }
 
-.imageBox {
+.imageContainer {
   margin-bottom: var(--gutter-normal);
 }
 
+/* Media Queries */
 @media (min-width: 901px) {
-  .imageBox {
+  .imageContainer {
     flex: 1;
     margin: 0 0 0 10rem;
   }
 }
 
 @media (max-width: 900px) {
-  .box {
+  .container {
     align-items: initial;
     flex-direction: column-reverse;
   }
 
-  .code {
+  .githubIcon {
     height: 4rem;
   }
 }

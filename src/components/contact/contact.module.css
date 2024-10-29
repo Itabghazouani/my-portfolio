@@ -1,0 +1,29 @@
+.section {
+  padding: var(--gutter-huge) 0;
+  border-bottom: var(--border-light);
+}
+
+.container {
+  max-width: var(--container-medium-width);
+}
+
+.text {
+  margin-bottom: var(--gutter-normal);
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height-normal);
+}
+
+.email {
+  display: inline-block;
+  margin-top: var(--gutter-small);
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+
+  .text {
+    font-size: var(--font-size-small);
+  }
+}

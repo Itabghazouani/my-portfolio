@@ -10,8 +10,8 @@ interface IProjectCardProps {
 
 const ProjectCard = ({ project }: IProjectCardProps) => {
   return (
-    <div className={styles.box}>
-      <div className={styles.text}>
+    <div className={styles.container}>
+      <div className={styles.content}>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
         <ul className={styles.list}>
@@ -19,34 +19,39 @@ const ProjectCard = ({ project }: IProjectCardProps) => {
             <li key={tech}>{tech}</li>
           ))}
         </ul>
-
         <div className={styles.links}>
           {project.siteUrl && (
-            <Link href={project.siteUrl} target="_blank" className="link__text">
+            <Link
+              href={project.siteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link__text"
+            >
               Visit Site <span>&rarr;</span>
             </Link>
           )}
           {project.githubUrl && (
             <Link
               href={project.githubUrl}
-              title="View Source Code"
               target="_blank"
+              rel="noopener noreferrer"
+              title="View Source Code"
             >
               <Image
                 src={GithubLogo}
                 width={30}
                 height={30}
                 alt="GitHub"
-                className={styles.code}
+                className={styles.githubIcon}
               />
             </Link>
           )}
         </div>
       </div>
-      <div className={styles.imageBox}>
+      <div className={styles.imageContainer}>
         <Image
           src={project.imageUrl}
-          alt={project.imageAlt}
+          alt={project.title}
           width={600}
           height={400}
           className="work__image"
