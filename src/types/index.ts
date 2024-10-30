@@ -13,3 +13,10 @@ export type SocialLink = {
   url: string;
   icon: string;
 };
+
+export type Resume = {
+  language: string;
+  flag: string;
+  file: string;
+  fileName: string;
+};

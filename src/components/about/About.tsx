@@ -1,11 +1,43 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import ItabPhoto from '../../../public/assets/itab-photo.jpg';
 import styles from './about.module.css';
+import { useState } from 'react';
+import { RESUMES } from '@/lib/constants';
 
 const About = () => {
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [showLanguages, setShowLanguages] = useState(false);
+
+  const handleDownload = async (file: string, fileName: string) => {
+    setIsDownloading(true);
+    try {
+      const response = await fetch(file);
+      if (!response.ok) throw new Error('Download failed');
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = fileName;
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      alert('Failed to download resume. Please try again.');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  const handleClickOutside = () => {
+    setShowLanguages(false);
+  };
+
   return (
     <section className={styles.section} id="about">
       <div className="row">
@@ -28,9 +60,48 @@ const About = () => {
               ready to contribute to innovative projects with my growing
               expertise.
             </p>
-            <Link href="/resume.pdf" className="btn">
-              My Resume
-            </Link>
+            <div className={styles.resumeContainer}>
+              <button
+                onClick={() => setShowLanguages(!showLanguages)}
+                className={`btn ${styles.downloadingButton} ${
+                  isDownloading ? styles.downloading : ''
+                }`}
+                disabled={isDownloading}
+              >
+                {isDownloading ? 'Downloading...' : 'Get my Resume ▾'}
+              </button>
+
+              {showLanguages && (
+                <>
+                  <div
+                    className="overlay"
+                    onClick={handleClickOutside}
+                    style={{
+                      position: 'fixed',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      zIndex: 5,
+                    }}
+                  />
+                  <div className={styles.languageSelector}>
+                    {RESUMES.map((resume) => (
+                      <button
+                        key={resume.language}
+                        onClick={() =>
+                          handleDownload(resume.file, resume.fileName)
+                        }
+                        className={styles.languageOption}
+                      >
+                        <span>{resume.flag}</span>
+                        {resume.language}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
           <div className={styles.photoContainer}>
             <Image

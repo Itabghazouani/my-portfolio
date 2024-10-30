@@ -1,4 +1,4 @@
-import { Project, SocialLink } from '@/types';
+import { Project, Resume, SocialLink } from '@/types';
 import InstagramIcon from '../../public/assets/icons/instagram.svg';
 import FacebookIcon from '../../public/assets/icons/facebook.svg';
 import XIcon from '../../public/assets/icons/x.svg';
@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     technologies: ['HTML', 'CSS', 'Javascript'],
     siteUrl: 'https://restaurant-order-thegoat-burger.netlify.app/',
     githubUrl: 'https://github.com/Itabghazouani/Restaurant-Ordering-App',
-    imageUrl: '/assets/burger.png',
+    imageUrl: '/assets/burgerwallpaper.jpg',
     imageAlt: 'Restaurant Ordering App',
   },
   {
@@ -105,4 +105,25 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: XIcon,
   },
   // ... other social links
+];
+
+export const RESUMES: Resume[] = [
+  {
+    language: 'English',
+    flag: '🇬🇧',
+    file: '/resumes/ItabResumeEnglish.pdf',
+    fileName: 'Itab_Ghazouani_Resume_EN.pdf',
+  },
+  {
+    language: 'Français',
+    flag: '🇫🇷',
+    file: '/resumes/ItabResumeFrench.pdf',
+    fileName: 'Itab_Ghazouani_CV_FR.pdf',
+  },
+  {
+    language: 'Español',
+    flag: '🇪🇸',
+    file: '/resumes/ItabResumeSpanish.pdf',
+    fileName: 'Itab_Ghazouani_CV_ES.pdf',
+  },
 ];

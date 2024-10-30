@@ -9,6 +9,23 @@
   align-items: center;
 }
 
+.downloading {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.downloadingButton {
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.downloadingButton:hover {
+  background: var(--orange);
+  transition: all 0.2s;
+}
+
 .text {
   flex: 0 0 35%;
 }
@@ -24,10 +41,62 @@
 .photo {
   width: 100%;
   height: auto;
-  border-radius: 4px; /* Optional: adds a slight rounded corner */
+  border-radius: 4px;
+}
+
+.resumeContainer {
+  position: relative;
+  display: inline-flex; /* Changed to inline-flex */
+  align-items: center;
+  gap: 1rem;
+}
+
+.languageSelector {
+  position: absolute;
+  left: calc(100% + 1rem); /* Position it to the right of the button */
+  bottom: 0; /* Align with bottom of button instead of using top */
+  background: var(--black);
+  border: 1px solid var(--orange);
+  border-radius: 4px;
+  padding: 0.5rem;
+  z-index: 10;
+  min-width: 200px;
+}
+
+.languageOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.languageOption:hover {
+  background: var(--orange);
+}
+
+.languageOption img {
+  width: 20px;
+  height: 20px;
 }
 
 /* Media Queries */
+
+@media (max-width: 768px) {
+  .languageSelector {
+    left: 0;
+    top: calc(100% + 0.5rem);
+    transform: none;
+  }
+}
+
 @media (max-width: 900px) {
   .content {
     flex-direction: column-reverse;
